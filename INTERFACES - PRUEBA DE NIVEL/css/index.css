@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*ESTILOS PARA LA VENTANA PRINCIPAL DEL FORMULARIO*/
+.main-window{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.window{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+
+
+.window-body{
+    text-align: center;
+}
+
+.window-body:hover{
+    cursor: pointer;
+}
+
+.window-body img {
+    width: 30%;
+    height: auto;
+    margin-top: 2vh;
+    margin-bottom: 0vh;
+    
+}
+
+
+label{
+    font-size: clamp(10px, 1.5vw, 12px) !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.formulario-bloque{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+.form-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.form-buttons button{
+    margin: 10px;
+}
+
+
+
+/*ESTILOS PARA LAS VENTANAS DE ERROR*/
+/*De normal, estas no se mostrarán por pantalla*/
+#nombre-error{
+    display: none;
+}
+
+#apellidos-error{
+    display: none;
+}
+
+#email-error{
+    display: none;
+}
+
+#edad-error{
+    display: none;
+}
+
+/*Estilos para los botones de aceptar al cerrar las ventanas de errores*/
+#error-accept-name, #error-accept-apellidos, #error-accept-email, #error-accept-contraseña, #error-accept-edad, #error-accept-sugerencias{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+
+
+/*Y si su error se activa, entonces aparecerán con ciertos estilos por pantalla*/
+#nombre-error, #apellidos-error, #email-error, #contraseña-error, #edad-error, #sugerencias-error{
+    position: absolute;
+    font-size: 15px;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: black;
+}
+
+#nombre-error img, #apellidos-error img, #email-error img, #contraseña-error img, #sugerencias-error img{
+    width: 50px !important;
+    height: 50px;
+}
+
+#nombre-error img, #apellidos-error img, #email-error img, #contraseña-error img, #sugerencias-error img{
+    width: 50px !important;
+    height: 50px;
+}
+
+.error-body-message{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding-top: 1vh;
+    padding-left: 1vw;
+}
+
+.name-error{
+    margin-left: 10px;
+}
+
+#error-accept{
+   display: block;
+   margin: 0 auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+
+/*Media queries para ayudar el diseño responsive*/
+@media screen and (max-width: 600px) {
+   .window{
+    min-width: 90vw;
+   }
+}
+

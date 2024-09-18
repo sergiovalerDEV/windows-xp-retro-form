@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Formulario XP Sergio Valer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Logo de la web -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+
+    <!-- Hoja de estilos locales -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css">
+
+    <!-- Estilos retro Windows -->
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+</head>
+<body>
+
+    <div class="window" id="main-window" style="width: auto; height: 99.4vh; margin-top: 0;">
+        <div class="title-bar">
+            <div class="title-bar-text">Formulario XP Sergio Valer</div>
+            <div class="title-bar-controls">
+                <button type="button" aria-label="Minimize"></button>
+                <button type="button" aria-label="Maximize"></button>
+                <button type="button" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <!-- Contenido del interior de la ventana -->
+        <div class="window" style="width: 300px;">
+            <div class="title-bar">
+                <div class="title-bar-text">Prueba de nivel Sergio Valer</div>
+                <div class="title-bar-controls">
+                    <button type="button" aria-label="Minimize"></button>
+                    <button type="button" aria-label="Maximize"></button>
+                    <button type="button" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img src="./img/form-logo.png" alt="Formulario Logo">
+            </div>
+
+            <div class="form-container">
+                <form id="myForm" action="https://formspree.io/f/mzzpqlwk" method="POST">
+                    <div class="formulario-bloque">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="formulario-bloque">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </div>
+                    <div class="formulario-bloque">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="formulario-bloque">
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" id="contraseña" name="contraseña" required>
+                    </div>
+                    <div class="formulario-bloque">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" name="sexo" required>
+                            <option value="">Seleccione...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Prefiero no decirlo</option>
+                        </select>
+                    </div>
+                    <div class="formulario-bloque">
+                        <label for="edad">Edad:</label>
+                        <input type="text" id="edad" name="edad" required>
+                    </div>
+                    <div class="formulario-bloque">
+                        <label for="sugerencias">Sugerencias:</label>
+                        <textarea id="sugerencias" name="sugerencias"></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" id="send-button">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- VENTANAS DE ERRORES CON ESTILO RETRO -->
+
+        <!-- Ventana para el manejo de errores en el nombre -->
+        <div class="window" id="nombre-error" style="width: 50vw; height: fit-content; display: none;">
+            <div class="title-bar">
+                <div class="title-bar-text">Formulario XP Sergio Valer</div>
+                <div class="title-bar-controls">
+                    <button type="button" aria-label="Minimize"></button>
+                    <button type="button" aria-label="Maximize"></button>
+                    <button type="button" aria-label="Close" id="nombre-error-close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="error-message">
+                    <img src="img/alert-icon.png" alt="Error" style="width: 100px; height: auto;">
+                    <p>El nombre no puede contener números.</p>
+                </div>
+                <button id="error-accept-nombre-error">Aceptar</button>
+            </div>
+        </div>
+
+        <!-- Ventana para el manejo de errores en los apellidos -->
+        <div class="window" id="apellidos-error" style="width: 50vw; height: fit-content; display: none;">
+            <div class="title-bar">
+                <div class="title-bar-text">Formulario XP Sergio Valer</div>
+                <div class="title-bar-controls">
+                    <button type="button" aria-label="Minimize"></button>
+                    <button type="button" aria-label="Maximize"></button>
+                    <button type="button" aria-label="Close" id="apellidos-error-close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="error-message">
+                    <img src="img/alert-icon.png" alt="Error" style="width: 100px; height: auto;">
+                    <p>Los apellidos no pueden contener números y deben estar separados por un espacio.</p>
+                </div>
+                <button id="error-accept-apellidos-error">Aceptar</button>
+            </div>
+        </div>
+
+        <!-- Ventana para el manejo de errores en el email -->
+        <div class="window" id="email-error" style="width: 50vw; height: fit-content; display: none;">
+            <div class="title-bar">
+                <div class="title-bar-text">Formulario XP Sergio Valer</div>
+                <div class="title-bar-controls">
+                    <button type="button" aria-label="Minimize"></button>
+                    <button type="button" aria-label="Maximize"></button>
+                    <button type="button" aria-label="Close" id="email-error-close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="error-message">
+                    <img src="img/alert-icon.png" alt="Error" style="width: 100px; height: auto;">
+                    <p>El correo electrónico debe estar bien escrito.</p>
+                </div>
+                <button id="error-accept-email-error">Aceptar</button>
+            </div>
+        </div>
+
+        <!-- Ventana para el manejo de errores en la contraseña -->
+        <div class="window" id="contraseña-error" style="width: 50vw; height: fit-content; display: none;">
+            <div class="title-bar">
+                <div class="title-bar-text">Formulario XP Sergio Valer</div>
+                <div class="title-bar-controls">
+                    <button type="button" aria-label="Minimize"></button>
+                    <button type="button" aria-label="Maximize"></button>
+                    <button type="button" aria-label="Close" id="contraseña-error-close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="error-message">
+                    <img src="img/alert-icon.png" alt="Error" style="width: 100px; height: auto;">
+                    <p>La contraseña debe contener al menos una letra mayúscula, una letra minúscula y un número.</p>
+                </div>
+                <button id="error-accept-contraseña-error">Aceptar</button>
+            </div>
+        </div>
+
+        <!-- Ventana para el manejo de errores en la edad -->
+        <div class="window" id="edad-error" style="width: 50vw; height: fit-content; display: none;">
+            <div class="title-bar">
+                <div class="title-bar-text">Formulario XP Sergio Valer</div>
+                <div class="title-bar-controls">
+                    <button type="button" aria-label="Minimize"></button>
+                    <button type="button" aria-label="Maximize"></button>
+                    <button type="button" aria-label="Close" id="edad-error-close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="error-message">
+                    <img src="img/alert-icon.png" alt="Error" style="width: 100px; height: auto;">
+                    <p>Debes ser mayor de 18 años.</p>
+                </div>
+                <button id="error-accept-edad-error">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
